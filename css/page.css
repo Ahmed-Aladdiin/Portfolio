@@ -1,0 +1,30 @@
+.page {
+  min-width: 100%;
+  height: 100%;
+  background-color: blue;
+  scroll-snap-align: start;
+}
+.page:nth-child(2) {
+  background-color: red;
+}
+.page:nth-child(1) {
+  background-color: yellow;
+}
+.page:nth-child(3) {
+  background-color: green;
+}
+.page:nth-child(4) {
+  background-color: pink;
+}
+
+main {
+  width: 100vw;
+  height: 100vh; 
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
