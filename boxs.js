@@ -1,4 +1,4 @@
-
+let color = 'orange';
 
 function box()
 {
@@ -10,10 +10,15 @@ function box()
     document.body.removeChild(e);
   }, 40000);
   e.style = `
+  border: 2px solid ${color};
+  box-shadow: 0 0 10px ${color},
+  0 0 30px ${color},
+  0 0 60px ${color};
+  box-shadow: inset 0 0 5px ${color};
   left:${Math.random() * 90}vw;
   top:${Math.random() * 90}vh;
   width: ${randInt(10, 20)}px;
-  animation: Ydir${randInt(1,2)} 100s linear, Xdir${randInt(1,3)} 100s linear, opac 40s linear, rotation${randInt(1,2)} 40s linear;
+  animation: Ydir${randInt(1,2)} 100s linear, Xdir${randInt(1,3)} 100s linear, opac 30s linear, rotation${randInt(1,2)} 40s linear;
   `;
 }
 
