@@ -16,6 +16,7 @@
   align-items: center;
   transition: width 0.5s;
   box-shadow: 0 0 7px rgb(0,0,0,0.22), 0 0 12px rgb(0,0,0,0.22);
+  z-index: 100;
 }
 
 .expanded {
