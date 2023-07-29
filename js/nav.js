@@ -10,6 +10,10 @@ nav.addEventListener('click', navExpand);
 main.addEventListener('wheel', ()=>changeSelectedNav(400));
 window.addEventListener('keydown', ()=>changeSelectedNav(400));
 
+setTimeout(() => {
+  navExpand();
+}, 300);
+
 function navExpand() {
   if (expanded)
   return;
@@ -79,11 +83,7 @@ function changeSelectedNav(timer) {
     pos = Math.round((main.scrollTop) / window.innerHeight);
     if(expanded)
     {
-      if (Xpos != pos)
-      {
-        navLinks[Xpos].classList.remove('selected');
-        Xpos = pos;
-      }
+      navLinks.forEach(i=>i.classList.remove('selected'));
       navLinks[pos].classList.add('selected');
     }
   }, timer);
