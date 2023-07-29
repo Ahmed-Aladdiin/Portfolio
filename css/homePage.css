@@ -26,12 +26,12 @@ body {
   flex-direction: column;
   justify-content: center;
   color: white;
-  padding: 30px 50px;
+  padding: 20px 25px 35px 60px;
 }
 #content h3 {
   position: relative;
-  font-size: 1.5em;
-  color: rgb(255, 255, 255);
+  font-size: 1.4em;
+  color: rgb(30, 81, 68);
 }
 
 #content h3::before {
@@ -44,11 +44,12 @@ body {
 }
 
 #content h2 {
-  margin: 10px 0px;
+  margin: 8px 0px 10px 0px;
   font-size: 2.4em;
 }
 #content p {
-  line-height: 1.5em;
+  font-size: 1.2em;
+  line-height: 1.2em;
   color: rgb(45, 42, 56);
 }
 
@@ -91,7 +92,7 @@ body {
 }
 
 #imgBx:hover::before {
-  width: 100px;
+  width: 300px;
 }
 
 /* the img itself */
