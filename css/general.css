@@ -1,7 +1,8 @@
 h1 {
   position: fixed;
-  top: calc(1.5vh + 12px);
-  left: 2vw;
+  padding: calc(1.5vh + 12px) 0 ;
+  padding-left: 2vw;
+  width: 100%;
   color: rgb(37, 232, 31);
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
   backdrop-filter: blur(20px);
