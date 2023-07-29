@@ -39,7 +39,11 @@ function navExpand() {
     setTimeout(() => {
       navLinks.forEach(element => {
         element.classList.remove('animation');
-        element.addEventListener('click', ()=>changeSelectedNav(1));
+        element.addEventListener('click', (event)=>{
+          navLinks.forEach(i => i.classList.remove('selected'));
+          element.classList.add('selected');
+          console.log(event);
+        });
         changeSelectedNav(1);
       });
     }, 700);
