@@ -92,7 +92,7 @@ body {
 }
 
 #imgBx:hover::before {
-  width: 300px;
+  width: 70%;
 }
 
 /* the img itself */
