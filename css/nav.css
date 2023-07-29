@@ -1,24 +1,119 @@
-nav {
+:root {
+  --Xcolor: rgb(37, 232, 31);
+}
+
+.navigator {
   position: fixed;
   right:5vw;
-  top: 5vh;
-  background-color: orange;
+  bottom: 5vh;
+  background-color: white;
   width: 50px;
+  height: 50px;
   border-radius: 35px;
-  aspect-ratio: 1/1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: width 0.5s;
+  box-shadow: 0 0 7px rgb(0,0,0,0.22), 0 0 12px rgb(0,0,0,0.22);
 }
 
-nav div {
+.expanded {
+  display: flex;
+  width: 90vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  animation: expand 0.5s ease;
+}
+
+.HamburgerIcon {
   width: 70%;
-  background-color: white;
+  background-color: var(--Xcolor);
   height: 5px;
   border-radius: 15px;
+  animation: pop 1s ease-in;
 }
-nav div:nth-child(2)
+.HamburgerIcon:nth-child(2)
 {
   margin: 4px 0;
+}
+
+.expanded a {
+  display: inline-block;
+  flex: 3;
+  color: var(--Xcolor);
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 19px;
+  font-weight:600;
+  transition: font-size 0.2s;
+  text-decoration: none;
+}
+
+a.animation, #Xmark {
+  animation: pop 0.7s ease-in;
+}
+
+.expanded a:hover {
+  font-size: 22px;
+}
+
+a.selected {
+  font-size: 22px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  animation: selectedNav 0.4s ease-in;
+}
+
+#Xmark {
+  margin-right: 30px;
+}
+
+.Xedge {
+  height: 5px;
+  width: 25px;
+  background-color: var(--Xcolor);
+  box-shadow: 0 0 3px var(--Xcolor), 0 0 6px var(--Xcolor);
+  border-radius: 15px;
+}
+
+.Xedge:nth-child(1) {
+  /* transform: rotate(60deg); */
+  transform: translate(0,50%) rotate(45deg);
+}
+.Xedge:nth-child(2) {
+  /* transform: rotate(-60deg); */
+  transform: translate(0,-50%) rotate(-45deg);
+}
+
+@keyframes expand {
+  0%
+  {
+    width: 50px;
+  }
+  100%
+  {
+    width: 90vw;
+  }
+}
+@keyframes pop {
+  0%
+  {
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 1;
+  }
+}
+@keyframes selectedNav {
+  0% {
+    /* font-size: 19px; */
+    text-decoration: none;
+  }
+  100% {
+    font-size: 22px;
+    text-decoration: underline;
+  }
 }
