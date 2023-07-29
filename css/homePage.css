@@ -1,0 +1,114 @@
+:root {
+  --imgSize: 25vw;
+}
+
+body {
+  background-image: linear-gradient(to right top, #deffff, #d1ffff, #c4ffff, #b5ffff, #a6ffff);
+}
+
+#home, #imgContainer, #imgBx, #mySelf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mySelf {
+  width: 100%;
+  padding-left: 3vw;
+}
+
+#content {
+  max-width: 600px;
+  aspect-ratio: 1.2/1;
+  border-radius: 16% 84% 62% 38% / 41% 54% 46% 59%;
+  background-image: linear-gradient(to left top, #02cdcd, #00d7bd, #00df9d, #00e56e, #25e81f);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 30px 50px;
+}
+#content h3 {
+  position: relative;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+}
+
+#content h3::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: rgb(242, 101, 0);
+  position: absolute;
+  transform: translate(-290%,0);
+}
+
+#content h2 {
+  margin: 10px 0px;
+  font-size: 2.4em;
+}
+#content p {
+  line-height: 1.5em;
+  color: rgb(45, 42, 56);
+}
+
+#mySelf {
+  flex: 1.5;
+}
+
+#imgContainer {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* the img box */
+#imgBx {
+  aspect-ratio: 1/1;
+  height: calc( var(--imgSize) * 1.0 );
+  min-height: 270px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.5s, transform 0.5s;
+  /* background-color: blueviolet; */
+}
+
+#imgBx:hover {
+  height: calc( var(--imgSize) * 1.0 );
+  transform: scale(1.2);
+}
+
+/* this the imgBox before shabe and its animation */
+#imgBx::before {
+  content: "";
+  height: 110%;
+  width: 110%;
+  background-image: linear-gradient(to left top, #02cdcd, #00d7bd, #00df9d, #00e56e, #25e81f);
+  position: absolute;
+  transition: height .5s, width 1s;
+  animation: animate 2s linear infinite;
+}
+
+#imgBx:hover::before {
+  width: 100px;
+}
+
+/* the img itself */
+#imgBx img {
+  width: 95%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
