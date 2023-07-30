@@ -21,3 +21,13 @@ h1 span {
   position: relative;
   transform: translateY(-6px)
 }
+
+h1::before {
+  content: "";
+  width: 170px;
+  height: 3px;
+  background-color: rgb(242, 101, 0);
+  position: absolute;
+  transform: translate(-2px ,40px);
+  border-radius: 5px;
+}
