@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient(to right top, #deffff, #d1ffff, #c4ffff, #b5ffff, #a6ffff);
+}
+
 h1 {
   position: fixed;
   padding: calc(1.5vh + 12px) 0 ;
