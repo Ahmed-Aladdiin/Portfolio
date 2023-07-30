@@ -2,10 +2,6 @@
   --imgSize: 25vw;
 }
 
-body {
-  background-image: linear-gradient(to right top, #deffff, #d1ffff, #c4ffff, #b5ffff, #a6ffff);
-}
-
 #home, #imgContainer, #imgBx, #mySelf {
   display: flex;
   justify-content: center;

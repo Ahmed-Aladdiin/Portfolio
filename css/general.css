@@ -1,3 +1,8 @@
+body {
+  /* background-image: linear-gradient(to right top, #deffff, #d1ffff, #c4ffff, #b5ffff, #a6ffff); */
+  background-color: rgb(6, 9, 23);
+}
+
 h1 {
   position: fixed;
   padding: calc(1.5vh + 12px) 0 ;
@@ -5,7 +10,7 @@ h1 {
   width: 100%;
   color: rgb(37, 232, 31);
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   z-index: 100;
 }
 
