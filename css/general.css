@@ -1,5 +1,6 @@
 body {
-  background-image: linear-gradient(to right top, #deffff, #d1ffff, #c4ffff, #b5ffff, #a6ffff);
+  /* background-image: linear-gradient(to right top, #deffff, #d1ffff, #c4ffff, #b5ffff, #a6ffff); */
+  background-color: rgb(6, 9, 23);
 }
 
 h1 {
