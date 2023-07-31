@@ -7,6 +7,17 @@
   scroll-snap-align: start;
   border: 2px solid black;
   flex: none;
+  position: relative;
+}
+
+.page .pageTitle {
+  top: calc(1.5vh + 18px);
+  right: 3vw;
+  font-size: 1.7em;
+  position: absolute;
+  color: rgb(37, 232, 31);
+  text-transform: uppercase;
+  font-family: cursive;
 }
 
 main {
