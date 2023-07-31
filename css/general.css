@@ -5,7 +5,7 @@ body {
 
 h1 {
   position: fixed;
-  padding: calc(1.5vh + 12px) 0 ;
+  padding: calc(1.5vh + 0px) 0 ;
   padding-left: 2vw;
   width: 100%;
   color: rgb(37, 232, 31);
@@ -25,7 +25,7 @@ h1 span {
 
 h1::before {
   content: "";
-  width: 184px;
+  width: 182px;
   height: 3px;
   background-color: rgb(242, 101, 0);
   position: absolute;
