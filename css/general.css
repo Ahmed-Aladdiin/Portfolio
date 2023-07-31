@@ -12,6 +12,7 @@ h1 {
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
   /* backdrop-filter: blur(20px); */
   z-index: 100;
+  font-family: cursive
 }
 
 h1 span {
@@ -24,10 +25,10 @@ h1 span {
 
 h1::before {
   content: "";
-  width: 170px;
+  width: 184px;
   height: 3px;
   background-color: rgb(242, 101, 0);
   position: absolute;
-  transform: translate(-2px ,40px);
+  transform: translate(-2px ,48px);
   border-radius: 5px;
 }
