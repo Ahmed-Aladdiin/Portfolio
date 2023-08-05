@@ -12,6 +12,6 @@ track.addEventListener('scroll', () => {
   let percentage = Math.round(track.scrollLeft/(track.scrollWidth - track.clientWidth) * 100);
 
   images.forEach(image => {
-    image.animate({objectPosition: `${100 - percentage}% 50%`}, {duration: 1700, fill: 'forwards'});    
+    image.animate({objectPosition: `${100 - percentage}% 50%`}, {duration: 1000, fill: 'forwards'});    
   });
 })
