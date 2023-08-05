@@ -78,7 +78,6 @@ function navContract() {
 
 
 function changeSelectedNav(timer) {
-  console.log('fire')
   setTimeout(() => {
     pos = Math.round((main.scrollTop) / window.innerHeight);
     if(expanded)
