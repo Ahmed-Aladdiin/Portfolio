@@ -23,7 +23,7 @@
   transform: translate(0, -50%);
   overflow-x: scroll;
   width: 100%;
-  padding: 0 calc(50% - 20vmin);
+  padding: 0 calc(50% - 21vmin);
   scroll-behavior: smooth;
 }
 
