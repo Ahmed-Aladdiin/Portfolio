@@ -80,3 +80,31 @@ const skillsCards = [
     skillInfo: 'Arduino'
   }
 ];
+
+const myProjects = [
+  { //first
+    image: "imgs/projects/aron-marinelli-DrsE-J_d0mw-unsplash.jpg",
+    alt: "small red racon on a tree",
+    details: ""
+  },
+  { //second
+    image: "imgs/projects/bilal-mansuri-mGI8b4KFoFM-unsplash.jpg",
+    alt: "beautiful small white room",
+    details: ""
+  },
+  { //third
+    image: "imgs/projects/reed-geiger-ZWDvLuGSn-k-unsplash.jpg",
+    alt: "A man doing a jump on a surfing board",
+    details: ""
+  },
+  { //fourth
+    image: "imgs/projects/rob-potter-_-fs9FcTnHY-unsplash.jpg",
+    alt: "black and white bird",
+    details: ""
+  },
+  { //fifth
+    image: "imgs/projects/vitalii-khodzinskyi-Vc4MjbuzTvY-unsplash.jpg",
+    alt: "drums",
+    details: ""
+  }
+]
