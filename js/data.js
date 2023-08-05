@@ -88,8 +88,8 @@ const myProjects = [
     details: ""
   },
   { //second
-    image: "imgs/projects/bilal-mansuri-mGI8b4KFoFM-unsplash.jpg",
-    alt: "beautiful small white room",
+    image: "imgs/projects/haydon-curteis-lateo-K-J2JHg9xK0-unsplash.jpg",
+    alt: "People walking on the pavement in a sunny day",
     details: ""
   },
   { //third
@@ -98,8 +98,8 @@ const myProjects = [
     details: ""
   },
   { //fourth
-    image: "imgs/projects/rob-potter-_-fs9FcTnHY-unsplash.jpg",
-    alt: "black and white bird",
+    image: "imgs/projects/thomas-park-G3hZMCdLUdw-unsplash.jpg",
+    alt: "food",
     details: ""
   },
   { //fifth
