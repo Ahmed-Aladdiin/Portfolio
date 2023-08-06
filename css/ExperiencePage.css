@@ -33,6 +33,7 @@
   height: 56vmin;
   width: 40vmin;
   object-fit: cover;
+  border: 1px solid white;
   object-position: right center;
 }
 
