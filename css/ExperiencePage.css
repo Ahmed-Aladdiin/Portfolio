@@ -52,6 +52,11 @@
   width: 12vmin;
   object-fit: cover;
   object-position: center center;
+  border: 1px solid white;
+}
+
+#imgs-track.tower > img:nth-child(1) {
+  border-radius: 16px 16px 0 0;
 }
 
 #imgs-track.tower > button {
@@ -62,6 +67,7 @@
   /* styling */
   background: rgba(242, 101, 0, 0.23);
   border: 1px solid rgba(242, 101, 0);
+  border-radius: 0 0 16px 16px;
   color: rgb(242, 101, 0);
   font-family: cursive;
   font-size: 1em;
@@ -74,7 +80,7 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5.1px);
   -webkit-backdrop-filter: blur(5.1px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 1);
 
   /* position */
   position: absolute;
