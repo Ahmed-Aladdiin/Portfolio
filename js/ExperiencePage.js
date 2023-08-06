@@ -1,3 +1,4 @@
+const timeout_1 = 500;
 const track = document.querySelector('#imgs-track');
 const aimMark = document.querySelector('#experience span');
 const viewedImage = document.querySelector('#viewed-image');
@@ -16,6 +17,7 @@ track.innerHTML += `
 track.lastElementChild.style.display = 'none';
 
 const images = document.querySelectorAll("#imgs-track img");
+const backButton = track.lastElementChild;
 
 // create the parallax effect
 track.addEventListener('scroll', () => {
@@ -30,7 +32,6 @@ track.addEventListener('scroll', () => {
 images.forEach(image => {
   image.addEventListener('click', () => {
     // clear the old styling, and give the new styling
-    const timeout_1 = 500;
     if(track.dataset.isExpanded)
     { track.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'}); }
     
@@ -41,7 +42,7 @@ images.forEach(image => {
         track.classList.remove('track');
         track.classList.add('tower');
         track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
-        track.lastElementChild.style.display = 'block';
+        backButton.style.display = 'block';
         viewedImage.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
       }
       
@@ -49,7 +50,7 @@ images.forEach(image => {
       track.dataset.isExpanded = '';
     }, timeout_1);
 
-    aimMark.style.opacity = 0;
+    aimMark.style.display = 'none';
 
     const i = image.dataset.index;
     if(track.dataset.isExpanded)
@@ -76,3 +77,19 @@ images.forEach(image => {
     } 
   });
 });
+
+// back button functionality
+
+backButton.onclick = () => {
+  track.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'});
+  viewedImage.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'});
+
+  setTimeout(() => {
+    track.classList.remove('tower');
+    track.classList.add('track');
+    backButton.style.display = 'none';
+    track.dataset.isExpanded = 'true';
+    track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
+    aimMark.style.display = 'inline';
+  }, timeout_1);
+};
