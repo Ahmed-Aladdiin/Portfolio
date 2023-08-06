@@ -10,13 +10,17 @@ myProjects.forEach((project, index) => {
   <img src=${project.image} alt="${project.alt}" data-index="${index}">
   `
 });
+track.innerHTML += `
+<button>Back</button>
+`;
+track.lastElementChild.style.display = 'none';
 
 const images = document.querySelectorAll("#imgs-track img");
 
 // create the parallax effect
 track.addEventListener('scroll', () => {
   let percentage = Math.round(track.scrollLeft/(track.scrollWidth - track.clientWidth) * 100);
-
+  
   images.forEach(image => {
     image.animate({objectPosition: `${100 - percentage}% 50%`}, {duration: 200, fill: 'forwards'});    
   });
@@ -37,6 +41,7 @@ images.forEach(image => {
         track.classList.remove('track');
         track.classList.add('tower');
         track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
+        track.lastElementChild.style.display = 'block';
         viewedImage.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
       }
       

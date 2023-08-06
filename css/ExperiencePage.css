@@ -54,6 +54,19 @@
   object-position: center center;
 }
 
+#imgs-track.tower > button {
+  /* dimensions */
+  height: 8vmin;
+  width: 12vmin;
+
+  /* styling */
+  background: rgba(242, 101, 0, 0.23);
+  border: 1px solid rgba(242, 101, 0);
+  color: rgb(242, 101, 0);
+  font-family: cursive;
+  font-size: 1em;
+}
+
 #viewed-image {
   /* glassy background */
   background: rgba(255, 255, 255, 0.23);
