@@ -3,7 +3,7 @@ let skillsHTML = '';
 skillsCards.forEach((card, index) => {
   skillsHTML += `
   <!-- skill ${index} -->
-  <div class="skillBox hasInfo" data-info=${card.skillInfoID}>
+  <div class="skillBox hasInfo ${card.scrollAnimation.from}" data-info=${card.skillInfoID}>
     <div class="skillContent">
       <img src="imgs/skills/${card.img}.png" alt=${card.imgAlt}>
       <div class="skillInfo" id=${card.skillInfoID}>

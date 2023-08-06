@@ -3,13 +3,21 @@ const skillsCards = [
     skillInfoID: 'CPP',
     img: 'skill-1',
     imgAlt: 'C plus plus',
-    skillInfo: 'C++'
+    skillInfo: 'C++',
+    scrollAnimation: {
+      from: 'hide-left-1',
+      to: 'show-left-1'
+    }
   },
   { //second
     skillInfoID: 'SD',
     img: 'skill-2',
     imgAlt: "Software Engineer",
-    skillInfo: 'Software<br>Developer'
+    skillInfo: 'Software<br>Developer',
+    scrollAnimation: {
+      from: 'hide-left-1',
+      to: 'show-left-1'
+    }
   },
   { //third 3
     skillInfoID: 'FE',
@@ -21,13 +29,21 @@ const skillsCards = [
       <li>css</li>
       <li>JavaScript</li>
     </ul>
-    `
+    `,
+    scrollAnimation: {
+      from: 'hide-right-1',
+      to: 'show-right-1'
+    }
   },
   { //4
     skillInfoID: 'GIT',
     img: 'skill-4',
     imgAlt: 'Git',
-    skillInfo: 'git'
+    skillInfo: 'git',
+    scrollAnimation: {
+      from: 'hide-right-1',
+      to: 'show-right-1'
+    }
   },
   { //5
     skillInfoID: 'SK',
@@ -41,25 +57,41 @@ const skillsCards = [
       <li>Punctuality</li>
       <li>Scheduling</li>
     </ul>
-    `
+    `,
+    scrollAnimation: {
+      from: 'hide-right-1',
+      to: 'show-right-1'
+    }
   },
   { //6
     skillInfoID: 'GH',
     img: 'skill-6',
     imgAlt: 'GitHub',
-    skillInfo: 'git-hub'
+    skillInfo: 'git-hub',
+    scrollAnimation: {
+      from: 'hide-left-1',
+      to: 'show-left-1'
+    }
   },
   { //7
     skillInfoID: 'JAVA',
     img: 'skill-7',
     imgAlt: 'Java',
-    skillInfo: 'Java'
+    skillInfo: 'Java',
+    scrollAnimation: {
+      from: 'hide-right-1',
+      to: 'show-right-1'
+    }
   },
   { //8
     skillInfoID: 'LA',
     img: 'skill-8',
     imgAlt: 'Languages',
-    skillInfo: '<pre>&bull;Arabic   &bull;English   &bull;German</pre>'
+    skillInfo: '<pre>&bull;Arabic   &bull;English   &bull;German</pre>',
+    scrollAnimation: {
+      from: 'hide-left-1',
+      to: 'show-left-1'
+    }
   },
   { // 9
     skillInfoID: 'MO',
@@ -71,13 +103,21 @@ const skillsCards = [
       <li>excel</li>
       <li>powerpoint</li>
     </ul>
-    `
+    `,
+    scrollAnimation: {
+      from: 'hide-left-1',
+      to: 'show-left-1'
+    }
   },
   {
     skillInfoID: 'AR',
     img: 'skill-10',
     imgAlt: 'Arduino',
-    skillInfo: 'Arduino'
+    skillInfo: 'Arduino',
+    scrollAnimation: {
+      from: 'hide-right-1',
+      to: 'show-right-1'
+    }
   }
 ];
 
