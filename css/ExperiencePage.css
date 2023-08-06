@@ -1,3 +1,6 @@
+:root {
+  --border-color: rgba(255, 255, 255, 0.6);
+}
 #experience {
   position: relative;
 }
@@ -33,7 +36,7 @@
   height: 56vmin;
   width: 40vmin;
   object-fit: cover;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
   object-position: right center;
 }
 
@@ -53,7 +56,7 @@
   width: 12vmin;
   object-fit: cover;
   object-position: center center;
-  border: 1px solid white;
+  border: 1px solid var(--border-color);
 }
 
 #imgs-track.tower > img:nth-child(1) {
@@ -81,7 +84,7 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5.1px);
   -webkit-backdrop-filter: blur(5.1px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--border-color);
 
   /* position */
   position: absolute;
