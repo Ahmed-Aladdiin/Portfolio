@@ -85,26 +85,26 @@ const myProjects = [
   { //first
     image: "imgs/projects/aron-marinelli-DrsE-J_d0mw-unsplash.jpg",
     alt: "small red racon on a tree",
-    details: ""
+    details: "bla1"
   },
   { //second
     image: "imgs/projects/haydon-curteis-lateo-K-J2JHg9xK0-unsplash.jpg",
     alt: "People walking on the pavement in a sunny day",
-    details: ""
+    details: "bla2"
   },
   { //third
     image: "imgs/projects/reed-geiger-ZWDvLuGSn-k-unsplash.jpg",
     alt: "A man doing a jump on a surfing board",
-    details: ""
+    details: "bla3"
   },
   { //fourth
     image: "imgs/projects/thomas-park-G3hZMCdLUdw-unsplash.jpg",
     alt: "food",
-    details: ""
+    details: "bla4"
   },
   { //fifth
     image: "imgs/projects/vitalii-khodzinskyi-Vc4MjbuzTvY-unsplash.jpg",
     alt: "drums",
-    details: ""
+    details: "bla5"
   }
 ]
