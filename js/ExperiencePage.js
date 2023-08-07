@@ -8,7 +8,7 @@ viewedImage.style.opacity = 0;
 // insert the projects images into their space
 myProjects.forEach((project, index) => {
   track.innerHTML += `
-  <img src=${project.image} alt="${project.alt}" data-index="${index}">
+  <img src=${project.image} alt="${project.alt}" data-index="${index}" class="hide-2">
   `
 });
 track.innerHTML += `
@@ -40,6 +40,10 @@ images.forEach(image => {
       if(track.dataset.isExpanded)
       { 
         track.classList.remove('track');
+        images.forEach(im => { 
+          im.classList.remove('hide-2');
+          im.classList.remove('show-2');
+        });
         track.classList.add('tower');
         track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
         backButton.style.display = 'block';
@@ -91,5 +95,12 @@ backButton.onclick = () => {
     track.dataset.isExpanded = 'true';
     track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
     aimMark.style.display = 'inline';
+
+    setTimeout(() => {
+      images.forEach(im => { 
+        im.classList.add('hide-2');
+        im.classList.add('show-2');
+      });
+    }, timeout_1);
   }, timeout_1);
 };

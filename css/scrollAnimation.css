@@ -11,6 +11,10 @@
   transform: translateX(100%);
 }
 
+.hide-2 {
+  transform: translateY(100%);
+}
+
 .show-1, .show-2 {
   filter: blur(0);
   opacity: 1;
@@ -20,4 +24,8 @@
 .show-1 {
   transform: translateX(0);
   transition-delay: 0.4s;
+}
+
+.show-2 {
+  transform: translateY(0);
 }

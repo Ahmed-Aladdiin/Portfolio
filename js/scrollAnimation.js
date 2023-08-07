@@ -20,8 +20,8 @@ const skillsObserver = new IntersectionObserver ( entries => {
 
 const hiddenSkillsRight = document.querySelectorAll('.hide-right-1');
 const hiddenSkillsLeft = document.querySelectorAll('.hide-left-1');
-// const hiddenProjects = document.querySelector('.hide-2');
+const hiddenProjects = document.querySelectorAll('.hide-2');
 
 hiddenSkillsLeft.forEach( el => skillsObserver.observe(el) );
 hiddenSkillsRight.forEach( el => skillsObserver.observe(el) );
-// skillsObserver.observe(hiddenProjects);
+hiddenProjects.forEach( el => skillsObserver.observe(el) );
