@@ -1,4 +1,4 @@
-.hide-left-1, .hide-right-1 {
+.hide-left-1, .hide-right-1, .hide-2 {
   filter: blur(20px);
   opacity: 0;
 }
@@ -11,10 +11,13 @@
   transform: translateX(100%);
 }
 
-.show-1 {
-  transform: translateX(0);
+.show-1, .show-2 {
   filter: blur(0);
   opacity: 1;
   transition: all 1s;
+}
+
+.show-1 {
+  transform: translateX(0);
   transition-delay: 0.4s;
 }

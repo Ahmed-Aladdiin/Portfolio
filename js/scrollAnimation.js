@@ -2,11 +2,17 @@ const skillsObserver = new IntersectionObserver ( entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting)
     {
-      entry.target.classList.add('show-1');
+      if(entry.target.classList.contains('hide-2'))
+      { entry.target.classList.add('show-2'); }
+      else
+        entry.target.classList.add('show-1');
     }
     else
     {
-      entry.target.classList.remove('show-1');
+      if(entry.target.classList.contains('hide-2'))
+      { entry.target.classList.remove('show-2'); }
+      else
+        entry.target.classList.remove('show-1');
     }
   });
 });
@@ -14,7 +20,8 @@ const skillsObserver = new IntersectionObserver ( entries => {
 
 const hiddenSkillsRight = document.querySelectorAll('.hide-right-1');
 const hiddenSkillsLeft = document.querySelectorAll('.hide-left-1');
+// const hiddenProjects = document.querySelector('.hide-2');
 
 hiddenSkillsLeft.forEach( el => skillsObserver.observe(el) );
 hiddenSkillsRight.forEach( el => skillsObserver.observe(el) );
-
+// skillsObserver.observe(hiddenProjects);
