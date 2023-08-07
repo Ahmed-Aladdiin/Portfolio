@@ -1,5 +1,6 @@
 :root {
   --border-color: rgba(255, 255, 255, 0.6);
+  --my-orange: rgb(242, 101, 0);
 }
 #experience {
   position: relative;
@@ -31,7 +32,13 @@
 }
 
 #imgs-track::-webkit-scrollbar {
-  display: none;
+  height: 8px;
+  padding-top: 10px;
+}
+
+#imgs-track::-webkit-scrollbar-thumb {
+  background-color: var(--my-orange);
+  border-radius: 10px;
 }
 
 #imgs-track > img {
@@ -40,6 +47,7 @@
   object-fit: cover;
   border: 1px solid var(--border-color);
   object-position: right center;
+  margin-bottom: 10px;
 }
 
 /* after contracting the track */
@@ -59,6 +67,7 @@
   object-fit: cover;
   object-position: center center;
   border: 1px solid var(--border-color);
+  margin-bottom: 0;
 }
 
 #imgs-track.tower > img:nth-child(1) {
@@ -72,9 +81,9 @@
 
   /* styling */
   background: rgba(242, 101, 0, 0.23);
-  border: 1px solid rgba(242, 101, 0);
+  border: 1px solid var(--my-orange);
   border-radius: 0 0 16px 16px;
-  color: rgb(242, 101, 0);
+  color: var(--my-orange);
   font-family: cursive;
   font-size: 1em;
 }
