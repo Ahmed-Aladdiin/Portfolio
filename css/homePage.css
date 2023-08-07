@@ -1,5 +1,5 @@
 :root {
-  --imgSize: 25vw;
+  --imgSize: 29vw;
 }
 
 #home, #imgContainer, #imgBx, #mySelf {
@@ -8,9 +8,13 @@
   align-items: center;
 }
 
+#home {
+  padding-bottom: 3vh;
+}
+
 #mySelf {
-  width: 100%;
-  padding-left: 3vw;
+  margin-left: 2vw;
+  flex: 1;
 }
 
 #content {
@@ -49,10 +53,6 @@
   color: rgb(45, 42, 56);
 }
 
-#mySelf {
-  flex: 1.5;
-}
-
 #imgContainer {
   flex: 1;
   height: 100%;
@@ -68,15 +68,14 @@
   position: relative;
   overflow: hidden;
   transition: height 0.5s, transform 0.5s;
-  /* background-color: blueviolet; */
 }
 
 #imgBx:hover {
   height: calc( var(--imgSize) * 1.0 );
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-/* this the imgBox before shabe and its animation */
+/* this is the imgBox before shape and its animation */
 #imgBx::before {
   content: "";
   height: 110%;
@@ -93,7 +92,7 @@
 
 /* the img itself */
 #imgBx img {
-  width: 95%;
+  width: 98%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   object-fit: cover;
