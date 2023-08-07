@@ -7,6 +7,7 @@
   /* scroll-snap-align: start; */
   flex: none;
   position: relative;
+  overflow: hidden;
 }
 
 .page .pageTitle {
