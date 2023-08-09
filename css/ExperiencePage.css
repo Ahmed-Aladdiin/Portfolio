@@ -18,6 +18,10 @@
   /* font-weight: 700; */
 }
 
+#imgs-track:focus {
+  outline: none;
+}
+
 #imgs-track.track {
   position: absolute;
   display: flex;
