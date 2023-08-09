@@ -4,14 +4,14 @@ const skillsObserver = new IntersectionObserver ( entries => {
     {
       if(entry.target.classList.contains('hide-2'))
       { entry.target.classList.add('show-2'); }
-      else
+      else if(entry.target.classList.contains('hide-right-1') || entry.target.classList.contains('hide-left-1'))
         entry.target.classList.add('show-1');
     }
     else
     {
       if(entry.target.classList.contains('hide-2'))
       { entry.target.classList.remove('show-2'); }
-      else
+      else if(entry.target.classList.contains('hide-right-1') || entry.target.classList.contains('hide-left-1'))
         entry.target.classList.remove('show-1');
     }
   });
