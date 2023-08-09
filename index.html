@@ -83,11 +83,11 @@
             </div>
           </div>
           <div id="contact-form">
-            <form>
+            <form onsubmit="setTimeout(() => {reset()}, 30);" action="https://formspree.io/f/meqbaeka" method="POST" target="_blank">
               <label for="name">Name</label>
-              <input type="text" id="name" required>
+              <input type="text" id="name" name="name" required>
               <label for="email">Email</label>
-              <input type="email" id="email" required>
+              <input type="email" id="email" name="email" required>
               <label for="message">Message</label>
               <textarea name="message" id="message" cols="30" rows="10"></textarea>
               <button type="submit">Send</button>
