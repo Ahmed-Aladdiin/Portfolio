@@ -1,0 +1,137 @@
+:root {
+  --myOrange: rgb(242, 101, 0);
+}
+
+#contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contacts-container {
+  background-image: linear-gradient(to left top, #02cdcd, #00d7bd, #00df9d, #00e56e, #25e81f);
+  border-radius: 20px;
+  width: 80%;
+  height: calc(80% - 20px);
+  transform: translateY(-10px);
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  display: flex;
+  align-items: center;
+  
+  gap: 2%;
+  padding: 0 4%;
+}
+
+#contacts-info, #contact-form {
+  height: 85%;
+}
+
+#contacts-info, #contact-form, #contact-form form {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contacts-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--myOrange);
+  font-size: 32px;
+}
+
+#contacts-info > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20%;
+  flex-wrap: wrap-reverse;
+}
+
+#contacts-info > div > p {
+  display: flex;
+  align-items: center;
+}
+
+#contacts-info div p object {
+  aspect-ratio: 1/1;
+  width: 25px;
+  margin-right: 8px;
+}
+
+#contacts-info > div > a > object {
+  aspect-ratio: 1/1;
+  width: 30px;
+}
+
+#contacts-info > div:nth-child(3) {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 8px;
+  margin-top: 20px;
+}
+
+#contact-form {
+  /* styling */
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  /* content layout */
+  padding: 20px;
+}
+
+#contact-form form {
+  gap: 8px;
+  position: relative;
+  flex-shrink: 2;
+}
+
+#contact-form form label {
+  padding-left: 9px;
+}
+
+#contact-form form input, #contact-form form textarea {
+  min-height: 30px;
+  padding: 8px ;
+  font-size: 16px;
+
+  border: 3px solid var(--myOrange);
+  border-radius: 7px;
+  
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#contact-form form input:focus, #contact-form form textarea:focus
+{
+  outline: none;
+}
+
+#contact-form form textarea {
+  resize: none;
+}
+
+#contact-form form button {
+  border: none;
+  background-color: var(--myOrange);
+  margin-top: 10px;
+  height: 60px;
+  width: 34%;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,0);
+
+  border-radius: 25px;
+
+}
