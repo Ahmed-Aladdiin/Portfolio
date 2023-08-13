@@ -1,11 +1,19 @@
 #testimonies {
   z-index: 2;
+  margin-bottom: 12vh;
 }
 #testimonies h2 {
-  color: white;
+  font-family: cursive;
   text-align: center;
 }
+#testimonies h2:nth-child(1) {
+  color: rgb(2, 205, 205);
+}
+#testimonies h2:nth-child(2) {
+  color: rgb(37, 232, 31);
+}
 #testimonies .testimonies-container {
+  margin-top: 5vh;
   display: grid;
   grid-template-columns: repeat(3, 270px);
   justify-content: center;

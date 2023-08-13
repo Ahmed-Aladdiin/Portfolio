@@ -1,12 +1,23 @@
+@import 'colors';
+
 #testimonies {
   z-index: 2;
+  margin-bottom: 12vh;
 
   h2 {
-    color: white;
+    font-family: cursive;
     text-align: center;
+
+    &:nth-child(1) {
+      color: $cyan;
+    }
+    &:nth-child(2) {
+      color: $green;
+    }
   }
 
   .testimonies-container {
+    margin-top: 5vh;
     display: grid;
     grid-template-columns: repeat(3, 270px);
     justify-content: center;
