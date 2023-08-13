@@ -1,7 +1,10 @@
+@import 'colors';
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,7 +18,7 @@ h1 {
   padding: calc(1.5vh + 0px) 0 ;
   padding-left: 2vw;
   width: 100%;
-  color: rgb(37, 232, 31);
+  color: $green;
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
   z-index: 100;
   font-family: cursive;

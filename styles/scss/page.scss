@@ -1,6 +1,5 @@
-* {
-  scroll-behavior: smooth;
-}
+@import 'colors';
+
 .page {
   min-width: 100%;
   height: 100%;
@@ -14,7 +13,7 @@
     right: 3vw;
     font-size: 1.7em;
     position: absolute;
-    color: rgb(37, 232, 31);
+    color: $green;
     text-transform: uppercase;
     font-family: cursive;
   }
