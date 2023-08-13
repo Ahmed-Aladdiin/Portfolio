@@ -1,0 +1,44 @@
+#testimonies {
+  z-index: 2;
+}
+#testimonies h2 {
+  color: white;
+  text-align: center;
+}
+#testimonies .testimonies-container {
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+  justify-content: center;
+  gap: 20px;
+}
+#testimonies .testimonies-container .testCard {
+  background-color: white;
+  border-radius: 15px;
+  padding: 12px 25px;
+}
+#testimonies .testimonies-container .testCard .stars {
+  padding: 7px 0;
+}
+#testimonies .testimonies-container .testCard .stars img {
+  transform: scale(0.8);
+  margin-right: 3px;
+}
+#testimonies .testimonies-container .testCard .reviewer {
+  display: flex;
+  padding-top: 12px;
+}
+#testimonies .testimonies-container .testCard .reviewer .rev-img {
+  aspect-ratio: 1/1;
+  width: 43px;
+  margin-right: 8px;
+}
+#testimonies .testimonies-container .testCard .reviewer .rev-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+#testimonies .testimonies-container .testCard .reviewer .rev-name {
+  margin-bottom: 3px;
+}
+#testimonies .testimonies-container .testCard .reviewer .rev-postion {
+  color: gray;
+}
