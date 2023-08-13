@@ -1,3 +1,4 @@
+@import 'colors';
 :root {
   --imgSize: 29vw;
 }
@@ -38,7 +39,7 @@
       content: "";
       width: 3px;
       height: 100%;
-      background-color: rgb(242, 101, 0);
+      background-color: $orange;
       position: absolute;
       transform: translate(-290%,0);
     }
@@ -53,6 +54,27 @@
     font-size: 1.2em;
     line-height: 1.2em;
     color: rgb(45, 42, 56);
+  }
+
+  #download-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: white;
+      letter-spacing: 2px;
+      font-size: 1.1em;
+      text-decoration: none;
+      background-color: $orange;
+      border-radius: 35px;
+
+      display: inline-block;
+      padding: 1.1em 1.2em;
+      width: fit-content;
+      position: relative;
+      transform: translate(-23%, 30px);
+    }
   }
 }
 
