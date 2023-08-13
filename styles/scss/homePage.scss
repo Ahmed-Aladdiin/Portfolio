@@ -28,7 +28,7 @@
   justify-content: center;
   color: white;
   padding: 20px 25px 35px 60px;
-  animation: floating .8s ease-in-out infinite alternate-reverse;
+  animation: floating 1.2s ease-in-out infinite alternate-reverse;
 
   h3 {
     position: relative;
@@ -136,9 +136,9 @@
 
 @keyframes floating {
   from {
-    transform: translateY(-0.4%);
+    transform: translateY(-0.5%);
   }
   to {
-    transform: translateY(0);
+    transform: translateY(0.5%);
   }
 }
