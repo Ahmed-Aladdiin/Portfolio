@@ -83,7 +83,6 @@ images.forEach(image => {
 });
 
 // back button functionality
-
 backButton.onclick = () => {
   track.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'});
   viewedImage.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'});
@@ -104,26 +103,3 @@ backButton.onclick = () => {
     }, timeout_1);
   }, timeout_1);
 };
-
-// This is the one that is working the best
-//third solution
-// let scroll = true;
-// track.addEventListener('wheel', (event) => {
-  
-//   if (!event.deltaY) {
-//     return;
-//   }
-
-//   event.preventDefault();
-
-//   if(scroll) {
-//   // event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
-//     event.currentTarget.scrollLeft += Math.sign(event.deltaY) * 200;
-//     scroll = false;
-
-//     setTimeout(() => {
-//       scroll = true;
-//     }, 260);
-//   }
-  
-// })
