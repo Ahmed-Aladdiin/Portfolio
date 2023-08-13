@@ -148,3 +148,21 @@ const myProjects = [
     details: "bla5"
   }
 ]
+
+const Reviewers = [
+  {
+    image: "imgs/testimonies/reviewers/1.jpg",
+    name: "Arun Rupesh Maini",
+    position: "Youtuber"
+  },
+  {
+    image: "imgs/testimonies/reviewers/2.jpg",
+    name: "Andy Sterkowitz",
+    position: "Software Developer"
+  },
+  {
+    image: "imgs/testimonies/reviewers/3.jpg",
+    name: "Marques Keith Brownlee",
+    position: "Youtuber"
+  }
+]
