@@ -4,15 +4,15 @@
 }
 
 .hide-left-1 {
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 
 .hide-right-1 {
-  transform: translateX(100%);
+  transform: translateX(50%);
 }
 
 .hide-2 {
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 
 .show-1, .show-2 {
@@ -23,7 +23,7 @@
 
 .show-1 {
   transform: translateX(0);
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 .show-2 {
