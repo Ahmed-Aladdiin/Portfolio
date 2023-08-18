@@ -1,6 +1,5 @@
 const timeout_1 = 500;
 const track = document.querySelector('#imgs-track');
-const aimMark = document.querySelector('#experience span');
 const viewedImage = document.querySelector('#viewed-image');
 
 viewedImage.style.opacity = 0;
@@ -54,8 +53,6 @@ images.forEach(image => {
       track.dataset.isExpanded = '';
     }, timeout_1);
 
-    aimMark.style.display = 'none';
-
     const i = image.dataset.index;
     if(track.dataset.isExpanded)
     {
@@ -93,7 +90,6 @@ backButton.onclick = () => {
     backButton.style.display = 'none';
     track.dataset.isExpanded = 'true';
     track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
-    aimMark.style.display = 'inline';
 
     setTimeout(() => {
       images.forEach(im => { 
