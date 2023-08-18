@@ -126,7 +126,7 @@ const myProjects = [
     image: "imgs/projects/aron-marinelli-DrsE-J_d0mw-unsplash.jpg",
     alt: "small red racon on a tree",
     details: "Pellentesque et dictum ante. Pellentesque suscipit quis nisl id hendrerit. Nunc aliquet congue felis congue posuere. Mauris ultricies odio ante, nec lacinia ligula hendrerit vel. Pellentesque laoreet tincidunt est. Nulla sagittis eros sodales, scelerisque erat in, facilisis diam. Proin ut accumsan turpis. Morbi in rutrum purus. Suspendisse condimentum, tellus nec sodales pretium, lacus eros congue lorem, eget fringilla ante nulla at ligula. Praesent iaculis tellus eget turpis euismod dictum. Vestibulum et est quam. Morbi eget lorem scelerisque, egestas dolor semper, interdum mauris. In eu tincidunt dui. Donec laoreet nisi quam, sit amet interdum mauris mattis in.",
-    type: "Animal"
+    type: "Animals"
   },
   { //second
     image: "imgs/projects/denys-nevozhai-7nrsVjvALnA-unsplash.jpg",
@@ -150,7 +150,7 @@ const myProjects = [
     image: "imgs/projects/jesse-cason-LEWbO3MqUsM-unsplash.jpg",
     alt: "A brown Owl",
     details: "Aliquam porta purus nisi, non rhoncus ipsum consectetur sed. Donec commodo est a nulla finibus luctus. Nulla non sagittis ligula. Pellentesque ornare sem eu enim venenatis, sed suscipit sem convallis. Nullam ac lectus at eros placerat molestie. Mauris cursus volutpat velit, scelerisque aliquam massa fermentum sit amet. Mauris mollis purus felis, at tincidunt diam auctor scelerisque. Sed ac est ut sapien tristique dictum et ac ipsum. Ut sem lacus, vulputate non ex eu, iaculis convallis enim. Cras at placerat metus. Etiam non scelerisque tortor, ut consequat arcu. Nulla in ante vitae est tristique auctor.",
-    type: "Animal"
+    type: "Animals"
   },
   { // sixth
     image: "imgs/projects/jezael-melgoza-layMbSJ3YOE-unsplash.jpg",

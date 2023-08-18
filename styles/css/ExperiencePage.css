@@ -13,6 +13,26 @@
   cursor: default;
 }
 
+#filter {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, 0);
+}
+#filter li {
+  display: inline-block;
+  border: 3px solid rgb(242, 101, 0);
+  padding: 8px 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+}
+#filter li.selected {
+  background-color: rgb(242, 101, 0);
+}
+
 #imgs-track:focus {
   outline: none;
 }
