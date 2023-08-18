@@ -7,7 +7,7 @@ viewedImage.style.opacity = 0;
 // insert the projects images into their space
 myProjects.forEach((project, index) => {
   track.innerHTML += `
-  <img src=${project.image} alt="${project.alt}" data-index="${index}" class="hide-2" draggable="false">
+  <img src=${project.image} alt="${project.alt}" data-index="${index}" class="hide-2" draggable="false" data-type="${project.type}">
   `
 });
 track.innerHTML += `
