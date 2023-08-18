@@ -14,13 +14,14 @@
 }
 
 #filter {
-  color: white;
   position: absolute;
   left: 50%;
   top: 12%;
   transform: translate(-50%, 0);
 }
-#filter li {
+#filter button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
   display: inline-block;
   border: 3px solid rgb(242, 101, 0);
   padding: 8px 10px;
@@ -28,8 +29,9 @@
   border-radius: 10px;
   font-size: 17px;
   cursor: pointer;
+  transition: background-color 0.4s;
 }
-#filter li.selected {
+#filter button.selected {
   background-color: rgb(242, 101, 0);
 }
 
@@ -73,25 +75,20 @@
   top: 50%;
   transform: translate(0, -50%);
 }
+#imgs-track.tower > img, #imgs-track.tower > button {
+  height: 6.5vmin;
+  width: 10vmin;
+}
 #imgs-track.tower > img {
-  height: 8vmin;
-  width: 12vmin;
   object-fit: cover;
   object-position: center center;
   border: 1px solid rgba(255, 255, 255, 0.6);
   margin-bottom: 0;
 }
-#imgs-track.tower > img:nth-child(1) {
-  border-radius: 16px 16px 0 0;
-}
 #imgs-track.tower > button {
-  /* dimensions */
-  height: 8vmin;
-  width: 12vmin;
   /* styling */
   background: rgba(242, 101, 0, 0.23);
   border: 1px solid rgb(242, 101, 0);
-  border-radius: 0 0 16px 16px;
   color: rgb(242, 101, 0);
   font-size: 1em;
 }

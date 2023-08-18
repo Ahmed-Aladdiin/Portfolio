@@ -17,14 +17,15 @@
 }
 
 #filter {
-  color: white;
-
+  
   position: absolute;
   left: 50%;
   top: 12%;
   transform: translate(-50%, 0);
   
-  li {
+  button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
     display: inline-block;
     border: 3px solid $orange;
     padding: 8px 10px;
@@ -32,6 +33,7 @@
     border-radius: 10px;
     font-size: 17px;
     cursor: pointer;
+    transition: background-color 0.4s;
 
     &.selected {
       background-color: $orange;
@@ -86,28 +88,27 @@
     top: 50%;
     transform: translate(0, -50%);
 
+    & > img, & > button {
+      height: 6.5vmin;
+      width: 10vmin;
+    }
+
     & > img {
-      height: 8vmin;
-      width: 12vmin;
       object-fit: cover;
       object-position: center center;
       border: 1px solid $border-color;
       margin-bottom: 0;
     }
 
-    & > img:nth-child(1) {
-      border-radius: 16px 16px 0 0;
-    }
+    // & > img:nth-child(1) {
+    //   border-radius: 16px 16px 0 0;
+    // }
 
     & > button {
-      /* dimensions */
-      height: 8vmin;
-      width: 12vmin;
-    
       /* styling */
       background: rgba(242, 101, 0, 0.23);
       border: 1px solid $orange;
-      border-radius: 0 0 16px 16px;
+      // border-radius: 0 0 16px 16px;
       color: $orange;
       font-size: 1em;
     }

@@ -1,6 +1,8 @@
 const timeout_1 = 500;
 const track = document.querySelector('#imgs-track');
 const viewedImage = document.querySelector('#viewed-image');
+const filter = document.querySelector('#filter');
+const filters = document.querySelectorAll('#filter button');
 
 viewedImage.style.opacity = 0;
 
@@ -33,6 +35,7 @@ images.forEach(image => {
     // clear the old styling, and give the new styling
     if(track.dataset.isExpanded)
     { track.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'}); }
+    filter.animate({opacity: 0}, {fill: 'forwards', duration: timeout_1});
     
     setTimeout(() => {
       
@@ -48,6 +51,8 @@ images.forEach(image => {
         backButton.style.display = 'block';
         viewedImage.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
       }
+
+      filter.style.display = 'none';
       
       // set the track to contracted
       track.dataset.isExpanded = '';
@@ -83,13 +88,15 @@ images.forEach(image => {
 backButton.onclick = () => {
   track.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'});
   viewedImage.animate({opacity: 0}, {duration: timeout_1, fill:'forwards'});
-
+  filter.style.display = 'block';
+  
   setTimeout(() => {
     track.classList.remove('tower');
     track.classList.add('track');
     backButton.style.display = 'none';
     track.dataset.isExpanded = 'true';
     track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
+    filter.animate({opacity: 1}, {fill: 'forwards', duration: 2*timeout_1});
 
     setTimeout(() => {
       images.forEach(im => { 
@@ -99,3 +106,23 @@ backButton.onclick = () => {
     }, timeout_1);
   }, timeout_1);
 };
+
+// filtering section
+filters.forEach(filter => {
+  //handle clicking on one of the filters
+  filter.addEventListener('click', (event) => {
+    document.querySelector('.selected').classList.remove('selected');
+    event.target.classList.add('selected');
+
+    images.forEach(image=> {
+      if(event.target.innerHTML === 'All' || image.dataset.type === event.target.innerHTML)
+      {
+        image.style.display = 'inline';
+      }
+      else 
+      {
+        image.style.display = 'none';
+      }
+    })
+  });
+});
