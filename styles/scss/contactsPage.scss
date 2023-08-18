@@ -21,7 +21,7 @@
 }
 
 #contacts-info, #contact-form {
-  height: 85%;
+  height: 89%;
 }
 
 #contacts-info, #contact-form, #contact-form form {
@@ -118,8 +118,7 @@
       border: none;
       background-color: $orange;
       margin-top: 10px;
-      height: 60px;
-      width: 34%;
+      padding: 12px 0;
       font-size: 1.1em;
       font-weight: 700;
       color: white;
