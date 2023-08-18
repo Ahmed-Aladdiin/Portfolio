@@ -14,7 +14,7 @@
 #testimonies .testimonies-container {
   margin-top: 5vh;
   display: grid;
-  grid-template-columns: repeat(3, 270px);
+  grid-template-columns: repeat(3, 290px);
   justify-content: center;
   gap: 20px;
 }
