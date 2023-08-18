@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 @import 'colors';
 
 * {
@@ -5,6 +6,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'ADLaM Display', cursive;
 }
 
 body {
@@ -21,12 +23,10 @@ h1 {
   color: $green;
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
   z-index: 100;
-  font-family: cursive;
 
   span {
     color: $cyan;
     display: inline-block;
-    /* margin-bottom: 19px; */
     position: relative;
     transform: translateY(-6px);
   }
