@@ -32,7 +32,4 @@ window.addEventListener('wheel', ()=>{
     track.focus();
   else
     track.blur();
-  console.log(pos)
-  console.log(document.activeElement)
-  // console.log(track);
 });

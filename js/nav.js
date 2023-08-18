@@ -34,7 +34,6 @@ function navExpand() {
     navLinks = document.querySelectorAll('.expanded a');
     
     nav.removeEventListener('click', navExpand);
-    console.log('called');
 
     setTimeout(() => {
       navLinks.forEach(element => {
@@ -42,7 +41,6 @@ function navExpand() {
         element.addEventListener('click', (event)=>{
           navLinks.forEach(i => i.classList.remove('selected'));
           element.classList.add('selected');
-          console.log(event);
         });
         changeSelectedNav(1);
       });
@@ -60,7 +58,6 @@ function navContract() {
     <div class="HamburgerIcon"></div>
     `;
     expanded = false;
-    console.log(expanded);
     
     Xmark.removeEventListener('click', navContract);
     Xmark = null;
@@ -76,6 +73,7 @@ function navContract() {
 function changeSelectedNav(timer) {
   setTimeout(() => {
     pos = Math.round((main.scrollTop) / window.innerHeight);
+    console.log(pos);
     if(expanded)
     {
       navLinks.forEach(i=>i.classList.remove('selected'));
