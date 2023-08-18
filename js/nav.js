@@ -72,10 +72,20 @@ function navContract() {
 
 function changeSelectedNav(timer) {
   setTimeout(() => {
-    pos = Math.round((main.scrollTop) / window.innerHeight);
-    console.log(pos);
+    pos = (main.scrollTop) / window.innerHeight;
+    console.log((main.scrollTop) / window.innerHeight);
     if(expanded)
     {
+      if(pos < 2.5)
+      {
+        pos = Math.round(pos);
+      }
+      else if (pos > 3) {
+        pos = 3;
+      }
+      else {
+        pos = Math.floor(pos);
+      }
       navLinks.forEach(i=>i.classList.remove('selected'));
       navLinks[pos].classList.add('selected');
     }
