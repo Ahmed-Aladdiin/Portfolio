@@ -35,7 +35,7 @@
     cursor: pointer;
     transition: background-color 0.4s;
 
-    &.selected {
+    &#selected {
       background-color: $orange;
     }
   }
@@ -60,8 +60,7 @@
   }
 
   &::-webkit-scrollbar {
-    height: 8px;
-    padding-top: 10px;
+    height: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -75,7 +74,7 @@
     object-fit: cover;
     border: 1px solid $border-color;
     object-position: right center;
-    margin-bottom: 10px;
+    margin-bottom: 19px;
   }
   
   // after contracting the track
@@ -113,6 +112,17 @@
       font-size: 1em;
     }
   }
+}
+
+#left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  height: 100px !important;
+  width: 100px !important;
+  border: none !important;
 }
 
 #viewed-image {

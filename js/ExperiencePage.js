@@ -6,6 +6,7 @@ const filters = document.querySelectorAll('#filter button');
 
 viewedImage.style.opacity = 0;
 
+track.innerHTML = `<img src="imgs/icons/arrow.png" id="left-arrow"/>`;
 // insert the projects images into their space
 myProjects.forEach((project, index) => {
   track.innerHTML += `
@@ -17,6 +18,7 @@ track.innerHTML += `
 `;
 track.lastElementChild.style.display = 'none';
 
+const scrollButton = document.querySelector('#left-arrow');
 const images = document.querySelectorAll("#imgs-track img");
 const backButton = track.lastElementChild;
 
@@ -30,7 +32,8 @@ track.addEventListener('scroll', () => {
 });
 
 // give the images a functionality when one of them is clicked
-images.forEach(image => {
+images.forEach((image, index) => {
+  if(!index) return;
   image.addEventListener('click', () => {
     // clear the old styling, and give the new styling
     if(track.dataset.isExpanded)
@@ -49,6 +52,7 @@ images.forEach(image => {
         track.classList.add('tower');
         track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
         backButton.style.display = 'block';
+        scrollButton.style.display = 'none';
         viewedImage.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
       }
 
@@ -94,6 +98,7 @@ backButton.onclick = () => {
     track.classList.remove('tower');
     track.classList.add('track');
     backButton.style.display = 'none';
+    scrollButton.style.display = 'block';
     track.dataset.isExpanded = 'true';
     track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
     filter.animate({opacity: 1}, {fill: 'forwards', duration: 2*timeout_1});
@@ -111,10 +116,14 @@ backButton.onclick = () => {
 filters.forEach(filter => {
   //handle clicking on one of the filters
   filter.addEventListener('click', (event) => {
-    document.querySelector('.selected').classList.remove('selected');
-    event.target.classList.add('selected');
+    const currentSelected = document.querySelector('#selected');
+    if(currentSelected == filter) return;
 
-    images.forEach(image=> {
+    currentSelected.id = 'not-selected';
+    event.target.id = 'selected';
+
+    images.forEach((image, index)=> {
+      if(!index) return;
       if(event.target.innerHTML === 'All' || image.dataset.type === event.target.innerHTML)
       {
         image.style.display = 'inline';
@@ -126,3 +135,8 @@ filters.forEach(filter => {
     })
   });
 });
+
+scrollButton.addEventListener('click', scrollTrack);
+function scrollTrack () {
+  track.scrollBy((track.scrollWidth - track.clientWidth)/2, 0);
+}
