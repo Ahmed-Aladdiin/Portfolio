@@ -2,10 +2,10 @@
   position: fixed;
   right: 5vw;
   bottom: 5vh;
-  background-color: white;
   width: 50px;
   height: 50px;
   border-radius: 35px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +13,9 @@
   transition: width 0.5s;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.22), 0 0 12px rgba(0, 0, 0, 0.22);
   z-index: 100;
+}
+.navigator.green-nav {
+  background-color: rgb(37, 232, 31);
 }
 
 .expanded {
@@ -56,8 +59,12 @@ a.selected {
   font-size: 22px;
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  color: rgb(37, 232, 31);
+  color: white;
   animation: selectedNav 0.4s ease-in;
+}
+
+a:nth-child(1).selected {
+  color: rgb(37, 232, 31);
 }
 
 #Xmark {
@@ -72,10 +79,14 @@ a.selected {
   border-radius: 15px;
 }
 .Xedge:nth-child(1) {
-  transform: translate(0, 50%) rotate(45deg);
+  transform: translate(0, 58%) rotate(45deg);
 }
 .Xedge:nth-child(2) {
-  transform: translate(0, -50%) rotate(-45deg);
+  transform: translate(0, -58%) rotate(-45deg);
+}
+.Xedge.white {
+  background-color: white;
+  box-shadow: 0 0 3px white, 0 0 6px white;
 }
 
 @keyframes expand {

@@ -47,8 +47,8 @@ function navExpand() {
           navLinks.forEach(i => i.classList.remove('selected'));
           element.classList.add('selected');
         });
-        changeSelectedNav(1);
       });
+      changeSelectedNav(1);
     }, 700);
   }
 }
@@ -67,6 +67,8 @@ function navContract() {
     Xmark.removeEventListener('click', navContract);
     Xmark = null;
 
+    nav.classList.remove('green-nav');
+
     setTimeout(() => {
       nav.addEventListener('click', navExpand);
     }, 500);
@@ -78,7 +80,6 @@ function navContract() {
 function changeSelectedNav(timer) {
   setTimeout(() => {
     pos = (main.scrollTop) / window.innerHeight;
-    console.log((main.scrollTop) / window.innerHeight);
     if(expanded)
     {
       if(pos < 2.5)
@@ -90,6 +91,15 @@ function changeSelectedNav(timer) {
       }
       else {
         pos = Math.floor(pos);
+      }
+
+      if(pos !== 0) {
+        nav.classList.add('green-nav');
+        document.querySelectorAll('.Xedge').forEach(edge => edge.classList.add('white'));
+      }
+      else {
+        nav.classList.remove('green-nav');
+        document.querySelectorAll('.Xedge').forEach(edge => edge.classList.remove('white'));
       }
       navLinks.forEach(i=>i.classList.remove('selected'));
       navLinks[pos].classList.add('selected');
