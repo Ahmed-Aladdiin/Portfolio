@@ -6,6 +6,7 @@ const filters = document.querySelectorAll('#filter button');
 
 viewedImage.style.opacity = 0;
 
+track.innerHTML = `<img src="imgs/icons/arrow.png" id="left-arrow"/>`;
 // insert the projects images into their space
 myProjects.forEach((project, index) => {
   track.innerHTML += `
@@ -30,7 +31,8 @@ track.addEventListener('scroll', () => {
 });
 
 // give the images a functionality when one of them is clicked
-images.forEach(image => {
+images.forEach((image, index) => {
+  if(!index) return;
   image.addEventListener('click', () => {
     // clear the old styling, and give the new styling
     if(track.dataset.isExpanded)
