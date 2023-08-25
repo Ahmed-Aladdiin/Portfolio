@@ -10,6 +10,11 @@ nav.addEventListener('click', navExpand);
 main.addEventListener('wheel', ()=>changeSelectedNav(400));
 window.addEventListener('keydown', ()=>changeSelectedNav(400));
 
+// Make the navigation bar extended by default
+setTimeout(() => {
+  navExpand();
+}, 1500);
+
 function navExpand() {
   if (expanded)
   return;
