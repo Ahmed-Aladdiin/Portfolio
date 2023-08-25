@@ -39,6 +39,9 @@
 .expanded a:hover {
   color: rgb(37, 232, 31);
 }
+.expanded.green-nav a:hover {
+  color: white;
+}
 
 .HamburgerIcon {
   width: 70%;

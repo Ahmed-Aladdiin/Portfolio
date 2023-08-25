@@ -46,6 +46,8 @@ function navExpand() {
         element.addEventListener('click', (event)=>{
           navLinks.forEach(i => i.classList.remove('selected'));
           element.classList.add('selected');
+
+          setTimeout(()=>changeSelectedNav(1), 700);
         });
       });
       changeSelectedNav(1);
