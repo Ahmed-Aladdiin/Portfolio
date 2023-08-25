@@ -128,3 +128,10 @@ filters.forEach(filter => {
     })
   });
 });
+
+const scrollButton = document.querySelector('#left-arrow');
+scrollButton.addEventListener('click', scrollTrack);
+
+function scrollTrack () {
+  track.scrollBy((track.scrollWidth - track.clientWidth)/2, 0);
+}
