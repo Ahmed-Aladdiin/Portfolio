@@ -18,6 +18,7 @@ track.innerHTML += `
 `;
 track.lastElementChild.style.display = 'none';
 
+const scrollButton = document.querySelector('#left-arrow');
 const images = document.querySelectorAll("#imgs-track img");
 const backButton = track.lastElementChild;
 
@@ -51,6 +52,7 @@ images.forEach((image, index) => {
         track.classList.add('tower');
         track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
         backButton.style.display = 'block';
+        scrollButton.style.display = 'none';
         viewedImage.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
       }
 
@@ -96,6 +98,7 @@ backButton.onclick = () => {
     track.classList.remove('tower');
     track.classList.add('track');
     backButton.style.display = 'none';
+    scrollButton.style.display = 'block';
     track.dataset.isExpanded = 'true';
     track.animate({opacity: 1}, {duration: timeout_1, fill:'forwards'});
     filter.animate({opacity: 1}, {fill: 'forwards', duration: 2*timeout_1});
@@ -129,9 +132,7 @@ filters.forEach(filter => {
   });
 });
 
-const scrollButton = document.querySelector('#left-arrow');
 scrollButton.addEventListener('click', scrollTrack);
-
 function scrollTrack () {
   track.scrollBy((track.scrollWidth - track.clientWidth)/2, 0);
 }
