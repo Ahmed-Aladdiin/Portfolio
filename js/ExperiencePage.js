@@ -116,10 +116,14 @@ backButton.onclick = () => {
 filters.forEach(filter => {
   //handle clicking on one of the filters
   filter.addEventListener('click', (event) => {
-    document.querySelector('.selected').classList.remove('selected');
-    event.target.classList.add('selected');
+    const currentSelected = document.querySelector('#selected');
+    if(currentSelected == filter) return;
 
-    images.forEach(image=> {
+    currentSelected.id = 'not-selected';
+    event.target.id = 'selected';
+
+    images.forEach((image, index)=> {
+      if(!index) return;
       if(event.target.innerHTML === 'All' || image.dataset.type === event.target.innerHTML)
       {
         image.style.display = 'inline';

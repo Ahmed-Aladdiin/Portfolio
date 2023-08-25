@@ -31,7 +31,7 @@
   cursor: pointer;
   transition: background-color 0.4s;
 }
-#filter button.selected {
+#filter button#selected {
   background-color: rgb(242, 101, 0);
 }
 
